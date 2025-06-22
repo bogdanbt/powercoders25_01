@@ -2,4 +2,6 @@
 # Score: 20
 
 def repeated_string(s, n):
-    return n // len(s) * s.count('a') + s[0: n % len(s)].count('a')
+    if not s:  
+        return 0
+    return n // len(s) * s.count('a') + s[:n % len(s)].count('a')
